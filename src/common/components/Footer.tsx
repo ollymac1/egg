@@ -2,6 +2,7 @@ import { Box, Typography } from '@mui/material'
 import { FC } from 'react'
 
 const Footer: FC = () => {
+  const now = new Date()
   return (
     <Box
       display={'flex'}
@@ -12,7 +13,7 @@ const Footer: FC = () => {
         height: (theme) => theme.spacing(5),
       }}
     >
-      <Typography variant='body2'>Footer</Typography>
+      <Typography variant='body2'>&copy; Moggs {now.getFullYear()}</Typography>
     </Box>
   )
 }

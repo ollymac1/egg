@@ -18,7 +18,13 @@ const Navbar: FC = () => {
   return (
     <>
       <AppBar position='static' sx={{ height: (theme) => theme.spacing(8) }}>
-        <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
+        <Toolbar
+          sx={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+          }}
+        >
           <Box display={'flex'} gap={2}>
             <Link to='/' style={{ textDecoration: 'none' }}>
               <Button variant='contained' color='secondary'>

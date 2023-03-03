@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App'
+import App from './app/App'
 import { CssBaseline, ThemeProvider } from '@mui/material'
 import { theme } from './app/config/theme'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
