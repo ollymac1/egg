@@ -1,6 +1,6 @@
-import { Box, Typography } from '@mui/material'
+import { Box, Button, Typography } from '@mui/material'
 import { FC } from 'react'
-import { useRouteError } from 'react-router-dom'
+import { Link, useRouteError } from 'react-router-dom'
 
 const Error: FC = () => {
   const error: any = useRouteError()
@@ -16,11 +16,14 @@ const Error: FC = () => {
     >
       <Typography variant='h1'>Oops!</Typography>
       <Typography>Sorry, an unexpected error has occurred.</Typography>
-      <Typography>
-        <Typography variant='body2'>
-          {error.statusText || error.message}
-        </Typography>
+      <Typography variant='body2'>
+        {error.statusText || error.message}
       </Typography>
+      <Link to='/' style={{ textDecoration: 'none' }}>
+        <Button variant='contained' sx={{ mt: 2 }}>
+          Go Home
+        </Button>
+      </Link>
     </Box>
   )
 }

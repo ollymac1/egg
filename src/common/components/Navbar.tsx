@@ -17,7 +17,12 @@ const user: User = {
 const Navbar: FC = () => {
   return (
     <>
-      <AppBar position='static' sx={{ height: (theme) => theme.spacing(8) }}>
+      <AppBar
+        position='static'
+        sx={{
+          height: (theme) => theme.spacing(8),
+        }}
+      >
         <Toolbar
           sx={{
             display: 'flex',
@@ -35,6 +40,12 @@ const Navbar: FC = () => {
             <Link to='/account' style={{ textDecoration: 'none' }}>
               <Button variant='contained' color='secondary'>
                 Account
+              </Button>
+            </Link>
+
+            <Link to='/dead' style={{ textDecoration: 'none' }}>
+              <Button variant='contained' color='secondary'>
+                Broken Link
               </Button>
             </Link>
           </Box>
