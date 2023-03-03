@@ -5,8 +5,8 @@ function App() {
   return (
     <Page>
       <Box display='flex' justifyContent={'center'} alignItems={'center'}>
-        <Typography variant='h1' sx={{ margin: (theme) => theme.spacing(20) }}>
-          EGG
+        <Typography variant='h1' textAlign={'center'}>
+          Egg
         </Typography>
       </Box>
     </Page>
