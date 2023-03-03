@@ -11,7 +11,7 @@ const Page: FC<PropsWithChildren> = ({ children }) => {
   return (
     <Box display={'flex'} flexDirection={'column'}>
       <Navbar />
-      <StyledBox minHeight={'calc(100vh-40px)'}>{children}</StyledBox>
+      <StyledBox>{children}</StyledBox>
       <Footer />
     </Box>
   )
