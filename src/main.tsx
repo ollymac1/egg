@@ -6,6 +6,7 @@ import { theme } from './app/config/theme'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Error from './common/components/Error'
 import Account from './features/account/containers'
+import Info from './features/info/containers'
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
   {
     path: '/account',
     element: <Account />,
+  },
+  {
+    path: '/info',
+    element: <Info />,
   },
 ])
 

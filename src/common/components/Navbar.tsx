@@ -43,6 +43,12 @@ const Navbar: FC = () => {
               </Button>
             </Link>
 
+            <Link to='/info' style={{ textDecoration: 'none' }}>
+              <Button variant='contained' color='secondary'>
+                Info
+              </Button>
+            </Link>
+
             <Link to='/dead' style={{ textDecoration: 'none' }}>
               <Button variant='contained' color='secondary'>
                 Broken Link
