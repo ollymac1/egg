@@ -4,6 +4,7 @@ import { getAvatarInitials } from '../helpers'
 import { Link } from 'react-router-dom'
 
 // TEST DATA
+// TypeScript Variable Type Annotations/Declaration:
 type User = {
   firstName: string
   lastName: string
