@@ -18,7 +18,6 @@ const Users = () => {
   const [loading, setLoading] = useState(true)
 
   const getUsers = async () => {
-    setLoading(true)
     const response = await fetch('https://jsonplaceholder.typicode.com/users')
     if (response.ok) {
       // if HTTP-status is 200-299
@@ -32,9 +31,15 @@ const Users = () => {
     }
   }
 
-  useEffect(() => {
-    //Get users on mount (setTimeout to simulate loading time - get data after 2 seconds)
+  const delayedGetUsers = () => {
+    //setTimeout to simulate loading time - get data after 2 seconds
+    setLoading(true)
     setTimeout(getUsers, 2000)
+  }
+
+  useEffect(() => {
+    //Get users on mount
+    delayedGetUsers()
   }, [])
 
   return (
@@ -86,7 +91,7 @@ const Users = () => {
           <Button
             disabled={users.length !== 0 || loading}
             variant='contained'
-            onClick={() => getUsers()}
+            onClick={() => delayedGetUsers()}
           >
             Fetch Users
           </Button>
