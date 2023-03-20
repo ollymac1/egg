@@ -63,14 +63,15 @@ const Users = () => {
         </Typography>
         {/* Show spinner if loading */}
         {loading && <CircularProgress />}
-        {/* Loop through users and return every user's name */}
+        {/* if no users and not loading */}
         {users.length === 0 && !loading && <Typography>No users</Typography>}
+        {/* if not loading, loop through users and return every user's name */}
         {!loading &&
           users.map((user, index) => {
             return (
               <Row key={`${index}${user.id}`}>
                 <Typography> {user.name}</Typography>
-                <Typography> {user.address.city}</Typography>
+                <Typography variant='body2'> {user.address.city}</Typography>
               </Row>
             )
           })}
