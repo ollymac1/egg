@@ -64,7 +64,7 @@ const Users = () => {
         {/* Show spinner if loading */}
         {loading && <CircularProgress />}
         {/* Loop through users and return every user's name */}
-        {users.length === 0 && <Typography>No users</Typography>}
+        {users.length === 0 && !loading && <Typography>No users</Typography>}
         {!loading &&
           users.map((user, index) => {
             return (
@@ -92,6 +92,7 @@ const Users = () => {
             disabled={users.length !== 0 || loading}
             variant='contained'
             onClick={() => delayedGetUsers()}
+            color='secondary'
           >
             Fetch Users
           </Button>
