@@ -18,7 +18,7 @@ const Counter:FC<PropTypes> = (props) => {
         <Typography>
             {state}
         </Typography>
-        <Button onClick={() => (prevState:number) => setState(10)}>Click me</Button>
+        <Button onClick={() => setState((prevState:number) => prevState + 1)}>Click me</Button>
       </Box>
     </Box>
   )
